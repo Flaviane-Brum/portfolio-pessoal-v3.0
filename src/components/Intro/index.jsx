@@ -18,7 +18,7 @@ export const Intro = () => {
             </S.IntroName>
             <S.IntroCv>
               <a
-                href="https://drive.google.com/file/d/16XZ2SsI8SKsoifLMV2QxzqkNHvQx82jF/view?usp=sharing"
+                href="https://drive.google.com/file/d/19zjme-wsURH2u3Gqw4xlgWv0nHPjE58H/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
