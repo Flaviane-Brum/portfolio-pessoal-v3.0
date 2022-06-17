@@ -60,7 +60,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color:var(--color-12) ;
-  min-height:calc(100vh + 84px) ;
  
   }
 
