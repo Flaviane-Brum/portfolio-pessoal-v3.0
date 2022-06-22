@@ -15,7 +15,7 @@ const Home = () => {
       duration: 1500,
       once: true,
     });
-  });
+  }, []);
   return (
     <>
       <Header />

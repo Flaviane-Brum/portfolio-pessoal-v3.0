@@ -25,7 +25,7 @@ export const IntroWrapper = styled.div`
   align-items: center;
   padding-bottom: 7.5rem;
   padding-top: 7.5rem;
-
+  justify-items: center;
   @media (max-width: 50rem) {
     grid-template-columns: 1fr;
     gap: 2rem;
