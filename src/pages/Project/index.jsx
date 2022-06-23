@@ -11,8 +11,9 @@ import { useProject } from "../../hooks/useProject";
 import { Suspense, useEffect, lazy } from "react";
 import { useState } from "react";
 import firebase from "../../services/firebase";
-import { useParams } from "react-router-dom";
+import { Route, useParams } from "react-router-dom";
 import Head from "../../components/helpers/Head";
+import { NotFound } from "../../components/NotFound";
 const ProjectSlide = lazy(() => import("./ProjectSlide"));
 
 const Project = () => {
@@ -52,6 +53,9 @@ const Project = () => {
   });
   return (
     <S.ProjectContainer id="top">
+      <Route>
+        <Route path="*" element={<NotFound />} />
+      </Route>
       <HeaderProject />
       <Container>
         {loading ? (
