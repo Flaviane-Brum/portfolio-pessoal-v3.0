@@ -12,6 +12,7 @@ import { Suspense, useEffect, lazy } from "react";
 import { useState } from "react";
 import firebase from "../../services/firebase";
 import { useParams } from "react-router-dom";
+import { NotFound } from "../../components/NotFound";
 import Head from "../../components/helpers/Head";
 const ProjectSlide = lazy(() => import("./ProjectSlide"));
 
@@ -52,45 +53,57 @@ const Project = () => {
   });
   return (
     <S.ProjectContainer id="top">
-      <HeaderProject />
-      <Container>
-        {loading ? (
-          <Loading />
-        ) : (
-          <S.Project>
-            {singleProject.length !== 0 && (
-              <Suspense fallback={<div></div>}>
-                <Head
-                  title={singleProject.title}
-                  description={singleProject.description}
-                />
-                <S.ProjectSpan>Projeto</S.ProjectSpan>
-                <Subtitle>{singleProject.title}</Subtitle>
-                <S.GridContainer>
-                  {tablet ? (
-                    <S.ProjectWrapper>
-                      <ProjectSlide singleProject={singleProject} />
-                      <ProjectInfo singleProject={singleProject} />
-                      <OtherProjects links={links} />
-                      <S.Up href="#top" aria-label="Ir para o topo da página">
-                        <BsFillArrowUpSquareFill color="#9071e9" size={30} />
-                      </S.Up>
-                    </S.ProjectWrapper>
-                  ) : (
-                    <>
-                      <S.ProjectWrapper>
-                        <ProjectSlide singleProject={singleProject} />
-                        <OtherProjects links={links} />
-                      </S.ProjectWrapper>
-                      <ProjectInfo singleProject={singleProject} />
-                    </>
-                  )}
-                </S.GridContainer>
-              </Suspense>
+      {id ? (
+        <>
+          <HeaderProject />
+          <Container>
+            {loading ? (
+              <Loading />
+            ) : (
+              <S.Project>
+                {singleProject.length !== 0 && (
+                  <Suspense fallback={<div></div>}>
+                    <Head
+                      title={singleProject.title}
+                      description={singleProject.description}
+                    />
+                    <S.ProjectSpan>Projeto</S.ProjectSpan>
+                    <Subtitle>{singleProject.title}</Subtitle>
+                    <S.GridContainer>
+                      {tablet ? (
+                        <S.ProjectWrapper>
+                          <ProjectSlide singleProject={singleProject} />
+                          <ProjectInfo singleProject={singleProject} />
+                          <OtherProjects links={links} />
+                          <S.Up
+                            href="#top"
+                            aria-label="Ir para o topo da página"
+                          >
+                            <BsFillArrowUpSquareFill
+                              color="#9071e9"
+                              size={30}
+                            />
+                          </S.Up>
+                        </S.ProjectWrapper>
+                      ) : (
+                        <>
+                          <S.ProjectWrapper>
+                            <ProjectSlide singleProject={singleProject} />
+                            <OtherProjects links={links} />
+                          </S.ProjectWrapper>
+                          <ProjectInfo singleProject={singleProject} />
+                        </>
+                      )}
+                    </S.GridContainer>
+                  </Suspense>
+                )}
+              </S.Project>
             )}
-          </S.Project>
-        )}
-      </Container>
+          </Container>
+        </>
+      ) : (
+        <NotFound />
+      )}
     </S.ProjectContainer>
   );
 };
