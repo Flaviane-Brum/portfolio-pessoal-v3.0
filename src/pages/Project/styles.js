@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 const slide = keyframes`
@@ -105,6 +106,6 @@ export const ProjectContent = styled.div`
     width: 100%;
   }
 `;
-export const Up = styled.a`
+export const Up = styled(Link)`
   align-self: flex-end;
 `;
