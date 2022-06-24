@@ -11,7 +11,7 @@ import { useProject } from "../../hooks/useProject";
 import { Suspense, useEffect, lazy } from "react";
 import { useState } from "react";
 import firebase from "../../services/firebase";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Head from "../../components/helpers/Head";
 const ProjectSlide = lazy(() => import("./ProjectSlide"));
 
@@ -21,7 +21,7 @@ const Project = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
   const [singleProject, setSingleProject] = useState([]);
-
+  const location = useLocation();
   const getSingleProject = async (id) => {
     setLoading(true);
     try {
@@ -48,7 +48,7 @@ const Project = () => {
   };
   useEffect(() => {
     getSingleProject(id);
-  }, [id]);
+  }, [id, location]);
   const links = projectList.filter((link) => {
     return link.id !== id;
   });
