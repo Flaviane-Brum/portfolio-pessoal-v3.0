@@ -1,6 +1,7 @@
 import * as S from "./styles";
 import { useState } from "react";
 import { liValues } from "../../helpers/data";
+import { Link } from "react-scroll";
 
 export const MenuMobile = () => {
   const [activeId, setActiveId] = useState(0);
@@ -14,10 +15,10 @@ export const MenuMobile = () => {
             className={activeId === value.id ? "active" : undefined}
             key={value.id}
           >
-            <a href={`${value.idLink}`}>
+            <Link to={value.idLink}>
               <S.Icon>{<value.icon />}</S.Icon>
               <S.Text>{value.text}</S.Text>
-            </a>
+            </Link>
           </S.NavigationItem>
         ))}
         <S.Indicater></S.Indicater>
