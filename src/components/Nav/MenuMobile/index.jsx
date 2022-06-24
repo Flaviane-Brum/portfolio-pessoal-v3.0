@@ -14,7 +14,7 @@ export const MenuMobile = () => {
             className={activeId === value.id ? "active" : undefined}
             key={value.id}
           >
-            <a href={`#${value.idLink}`}>
+            <a href={`${value.idLink}`}>
               <S.Icon>{<value.icon />}</S.Icon>
               <S.Text>{value.text}</S.Text>
             </a>
