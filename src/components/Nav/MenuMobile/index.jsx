@@ -18,6 +18,9 @@ export const MenuMobile = () => {
               className={activeId === value.id ? "active" : undefined}
               to={value.idLink}
               activeClass={activeId === value.id ? "active" : undefined}
+              smooth={true}
+              offset={-133}
+              duration={500}
             >
               <S.Icon>{<value.icon />}</S.Icon>
               <S.Text>{value.text}</S.Text>

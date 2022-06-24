@@ -10,7 +10,6 @@ export const Nav = () => {
             <S.Anchor
               activeClass="active"
               to={value.idLink}
-              spy={true}
               smooth={true}
               offset={-85}
               duration={500}
