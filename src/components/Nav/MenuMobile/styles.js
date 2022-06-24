@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export const Icon = styled.span`
   position: relative;
@@ -79,27 +80,6 @@ export const NavigationItem = styled.li.attrs((/* props */) => ({
   z-index: 1;
   color: var(--color-0);
 
-  a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-    -webkit-tap-highlight-color: transparent;
-  }
-  &.active ${Icon} {
-    transform: translateY(-32px);
-    color: var(--color-p9);
-    font-size: 1.5rem;
-  }
-
-  &.active ${Text} {
-    opacity: 1;
-    transform: translateY(10px);
-  }
   &:nth-child(1).active ~ ${Indicater} {
     transform: translateX(calc(70px * 0));
   }
@@ -111,5 +91,28 @@ export const NavigationItem = styled.li.attrs((/* props */) => ({
   }
   &:nth-child(4).active ~ ${Indicater} {
     transform: translateX(calc(70px * 3));
+  }
+`;
+
+export const Anchor = styled(Link)`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  -webkit-tap-highlight-color: transparent;
+
+  &.active ${Icon} {
+    transform: translateY(-32px);
+    color: var(--color-p9);
+    font-size: 1.5rem;
+  }
+
+  &.active ${Text} {
+    opacity: 1;
+    transform: translateY(10px);
   }
 `;
