@@ -32,6 +32,8 @@ const Project = () => {
         .get();
 
       if (docRef.exists) {
+        setLoading(true);
+
         const data = docRef.data();
         setSingleProject(data);
       } else {
@@ -50,7 +52,6 @@ const Project = () => {
   const links = projectList.filter((link) => {
     return link.id !== id;
   });
-  console.log(singleProject);
 
   return (
     <S.ProjectContainer id="top">
