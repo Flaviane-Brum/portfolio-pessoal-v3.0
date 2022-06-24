@@ -11,8 +11,8 @@ import { useProject } from "../../hooks/useProject";
 import { Suspense, useEffect, lazy } from "react";
 import { useState } from "react";
 import firebase from "../../services/firebase";
-import Head from "../../components/helpers/Head";
 import { useParams } from "react-router-dom";
+import Head from "../../components/helpers/Head";
 const ProjectSlide = lazy(() => import("./ProjectSlide"));
 
 const Project = () => {
@@ -50,6 +50,8 @@ const Project = () => {
   const links = projectList.filter((link) => {
     return link.id !== id;
   });
+  console.log(singleProject);
+
   return (
     <S.ProjectContainer id="top">
       <HeaderProject />
