@@ -31,6 +31,8 @@ export const ProjectContainer = styled.article`
 
 export const Project = styled.div`
   padding-top: 3.75rem;
+  animation: ${slide} 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
   @media (max-width: 61.938rem) {
     padding-top: 2.75rem;
   }
@@ -59,7 +61,6 @@ export const ProjectSpan = styled.span`
 
 export const GridContainer = styled.div`
   display: grid;
-  animation: ${slide} 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
   align-items: flex-start;
@@ -83,6 +84,7 @@ export const ProjectContent = styled.div`
   padding: 1rem;
   border-radius: 4px;
   box-shadow: 0 4px 16px 4px rgb(0 0 0 / 30%);
+
   p {
     color: var(--color-5);
     font: var(--roboto-16);

@@ -63,13 +63,7 @@ export const GlobalStyle = createGlobalStyle`
  
   }
 
-  /* html {
-    
-  @media (max-width: 30rem) {
-    scroll-padding-top: 133px;
-    scroll-behavior:smooth ;
-  }
-} */
+  
 
  @media (max-width: 1080px) {
       html {

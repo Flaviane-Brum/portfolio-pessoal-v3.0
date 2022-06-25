@@ -22,11 +22,20 @@ export const Anchor = styled(Link)`
   display: inline-block;
   padding: 0.5rem 0;
   position: relative;
-  &.active {
-    color: var(--color-p5);
+
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: var(--color-0);
+    margin-top: 2px;
+    transition: 0.3s;
+    position: absolute;
   }
-  &:hover {
-    color: var(--color-p2);
+  &:hover:after,
+  &.active:after {
+    width: 100%;
   }
   @media (max-width: 50rem) {
     background: var(--color-11);
@@ -34,6 +43,13 @@ export const Anchor = styled(Link)`
     border-radius: 4px;
     &:hover {
       background-color: var(--color-10);
+    }
+    &.active {
+      background-color: var(--color-p3);
+      color: var(--color-p10);
+    }
+    &::after {
+      display: none;
     }
   }
   @media (max-width: 40.063rem) {
