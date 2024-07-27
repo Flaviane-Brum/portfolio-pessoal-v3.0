@@ -84,14 +84,14 @@ export const AboutContent = styled.div`
   }
   p {
     max-width: 60ch;
-    font: var(--roboto-24);
+    font: var(--roboto-18);
     color: var(--color-5);
     margin-bottom: 1rem;
     @media (max-width: 64rem) {
       max-width: 40ch;
     }
     @media (max-width: 37.5rem) {
-      font: var(--roboto-18);
+      font: var(--roboto-16);
     }
 
     &:last-child {

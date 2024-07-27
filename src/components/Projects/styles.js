@@ -20,12 +20,16 @@ export const Projects = styled.article`
   }
 `;
 export const Project = styled.ul`
-  display: flex;
+  display: grid;
+	grid-template-columns: repeat(3,1fr);
   justify-content: center;
   height: 100%;
   gap: 1.5rem;
-  @media (max-width: 69.438rem) {
+  @media (max-width: 50rem) {
+	grid-template-columns: repeat(2,1fr);
     justify-content: center;
-    flex-wrap: wrap;
   }
+  @media (max-width: 30rem) {
+	grid-template-columns: repeat(1,1fr);
+	}
 `;

@@ -14,6 +14,8 @@ import {
   SiSass,
   SiBootstrap,
   SiGithub,
+	SiVuedotjs,
+	SiTailwindcss 
 } from "react-icons/si";
 export const dataIcons = [
   { id: 0, icon: IoLogoJavascript, name: "iconJs" },
@@ -57,8 +59,10 @@ export const dataTechs = [
   { id: 1, icon: SiCss3, techName: "CSS3" },
   { id: 2, icon: SiSass, techName: "Sass" },
   { id: 3, icon: SiBootstrap, techName: "Bootstrap" },
+  { id: 9, icon: SiTailwindcss, techName: "Tailwind" },
   { id: 4, icon: SiJavascript, techName: "Javascript" },
   { id: 5, icon: SiReact, techName: "ReactJs" },
+  { id: 8, icon: SiVuedotjs, techName: "VueJs" },
   { id: 6, icon: SiGit, techName: "Git" },
   { id: 7, icon: SiGithub, techName: "Github" },
 ];

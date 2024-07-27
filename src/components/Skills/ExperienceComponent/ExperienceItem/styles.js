@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const EducationItem = styled.div`
-  background: var(--color-12);
+export const ExperienceItem = styled.div`
+ background: var(--color-12);
   padding: 1.25rem;
   border-radius: 4px;
   position: relative;
