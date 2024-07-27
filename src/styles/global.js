@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   --color-p2: #ddc8ff;
   --color-p3: #c3aeff;
   --color-p4: #a78afb;
-  --color-p5: #9071e9;
+  --color-p5: hsl(256, 73%, 68%);
   --color-p6: #6961d7;
   --color-p7: #554dbe;
   --color-p8: #393199;
