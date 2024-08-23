@@ -6,7 +6,7 @@ import { Header } from "../../components/Header";
 import { Skills } from "../../components/Skills";
 import { Github } from "../../components/Github";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
 import { Footer } from "../../components/Footer";
 import Head from "../../components/helpers/Head";
 const Home = () => {
