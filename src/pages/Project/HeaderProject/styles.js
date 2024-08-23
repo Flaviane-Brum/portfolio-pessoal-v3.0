@@ -17,14 +17,19 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   justify-content: center;
 `;
 
 export const HeaderLogo = styled(Link)`
+	display:flex;
+	flex-direction: column;
+	align-items: center;
   padding: 0.5rem 0;
-  img {
-    height: 28px;
+	color: var(--color-5);
+  svg {
+    color: var(--color-p5);
+		font-size: 2rem;
   }
 `;

@@ -10,7 +10,6 @@ export const Skills = styled.section`
     margin-bottom: 2.5rem;
     @media (max-width: 50rem) {
       margin-bottom: 2rem;
-      text-align: center;
     }
   }
   @media (max-width: 50rem) {

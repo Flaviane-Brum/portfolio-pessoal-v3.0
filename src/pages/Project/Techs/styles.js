@@ -18,7 +18,7 @@ const animateHover = keyframes`
   }
 `;
 export const Techs = styled.ul`
-  background-color: var(--color-11);
+  background-color: var(--color-12);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -36,7 +36,7 @@ export const Techs = styled.ul`
     padding: 0.625rem 1rem;
     border-radius: 4px;
     box-shadow: 0 2px 3px 0 rgb(0 0 0 / 50%);
-    background-color: var(--color-12);
+    background-color: var(--color-11);
     border: 2px solid var(--color-12);
     position: relative;
     overflow: hidden;

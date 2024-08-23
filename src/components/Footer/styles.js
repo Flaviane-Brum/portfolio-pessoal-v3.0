@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const Footer = styled.footer`
   color: var(--color-0);
+	background:var(--color-11);
   padding-top: 5rem;
   padding-bottom: 5rem;
 `;
@@ -51,7 +52,7 @@ export const ContactList = styled.ul`
       display: block;
       max-width: 360px;
       height: 2px;
-      background: var(--color-11);
+      background: var(--color-10);
       margin-top: 1rem;
     }
 

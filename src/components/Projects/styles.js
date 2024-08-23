@@ -14,9 +14,7 @@ export const Projects = styled.article`
     color: var(--color-0);
     margin-bottom: 2rem;
     justify-self: flex-start;
-    @media (max-width: 60.938rem) {
-      text-align: center;
-    }
+    
   }
 `;
 export const Project = styled.ul`

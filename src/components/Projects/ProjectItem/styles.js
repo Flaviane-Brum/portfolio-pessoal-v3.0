@@ -10,6 +10,7 @@ export const Card = styled.li`
   display: flex;
   flex-direction: column;
   max-width: 450px;
+	cursor: pointer;
   img {
     border-radius: 4px;
     width: 100%;

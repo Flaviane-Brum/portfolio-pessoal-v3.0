@@ -28,7 +28,7 @@ export const Anchor = styled(Link)`
     display: block;
     height: 2px;
     width: 0px;
-    background: var(--color-0);
+    background: var(--color-p5);
     margin-top: 2px;
     transition: 0.3s;
     position: absolute;

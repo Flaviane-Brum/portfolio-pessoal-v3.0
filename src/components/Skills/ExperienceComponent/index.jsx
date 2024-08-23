@@ -12,7 +12,7 @@ export const ExperienceComponent = () => {
 				Experiência
 			</h3>
 
-			<S.Experience>
+			<S.Experience data-aos="flip-left">
 				<img src={decX} alt="" />
 				<ExperienceItem
 					ExperienceCompany="IBCMED"

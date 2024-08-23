@@ -92,6 +92,9 @@ export const NavigationItem = styled.li.attrs((/* props */) => ({
   &:nth-child(4).active ~ ${Indicater} {
     transform: translateX(calc(70px * 3));
   }
+		&:nth-child(5).active ~ ${Indicater} {
+    transform: translateX(calc(70px * 4));
+  }
 `;
 
 export const Anchor = styled(Link)`

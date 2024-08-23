@@ -25,7 +25,6 @@ export const IntroWrapper = styled.div`
   align-items: center;
   padding-bottom: 7.5rem;
   padding-top: 7.5rem;
-  justify-items: center;
   @media (max-width: 50rem) {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -34,6 +33,7 @@ export const IntroWrapper = styled.div`
   }
 `;
 export const IntroContent = styled.div`
+ 
   @media (max-width: 50rem) {
     text-align: center;
   }
@@ -108,6 +108,7 @@ export const Title = styled.h1`
 export const IntroImg = styled.div`
   position: relative;
   max-width: 320px;
+	justify-self: center;
   animation: ${moveUpDown} 4s linear infinite;
   img {
     object-fit: cover;
