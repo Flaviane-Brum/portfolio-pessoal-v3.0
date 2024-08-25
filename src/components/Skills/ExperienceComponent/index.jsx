@@ -3,7 +3,6 @@ import decX from "/dec/decX.svg";
 import { FaBriefcase } from "react-icons/fa";
 import { ExperienceItem } from "./ExperienceItem";
 
-
 export const ExperienceComponent = () => {
 	return (
 		<>
@@ -16,12 +15,12 @@ export const ExperienceComponent = () => {
 				<img src={decX} alt="" />
 				<ExperienceItem
 					ExperienceCompany="IBCMED"
-					ExperienceOffice="Funcão: Programadora Front-end Júnior"
+					ExperienceOffice="Função: Programadora Front-end Júnior"
 					ExperienceYear="2023 - 2024 1 ano 8 meses"
 				/>
 				<ExperienceItem
 					ExperienceCompany="WEBGLOBAL"
-					ExperienceOffice="Funcão: Desenvolvedora web Júnior"
+					ExperienceOffice="Função: Desenvolvedora web Júnior"
 					ExperienceYear="2024 - Atual 4 meses"
 				/>
 			</S.Experience>

@@ -1,16 +1,21 @@
-import { Routes, Route, HashRouter, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import { NotFound } from "./components/NotFound";
-import Home from "./pages/Home";
-import Project from "./pages/Project";
+
+import { Loading } from "./components/helpers/Loading";
+const Home = lazy(() => import("./pages/Home"));
+const Project = lazy(() => import("./pages/Project"));
 
 function App() {
 	return (
 		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/project/:id" element={<Project />} />
-				<Route path="/*" element={<NotFound />} />
-			</Routes>
+			<Suspense fallback={<Loading />}>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/project/:id" element={<Project />} />
+					<Route path="*" element={<NotFound text="Página não encontrada." />} />
+				</Routes>
+			</Suspense>
 		</BrowserRouter>
 	);
 }

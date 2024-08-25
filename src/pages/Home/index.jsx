@@ -31,7 +31,6 @@ const Home = () => {
 				<Projects />
 				<Skills />
 				<Github />
-
 			</main>
 			<Footer />
 		</>

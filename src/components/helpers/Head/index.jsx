@@ -1,14 +1,16 @@
 import { useEffect } from "react";
 
-const Head = (props) => {
-  useEffect(() => {
-    document.title = props.title + " | Portfólio";
-    document
-      .querySelector("meta[name='description']")
-      .setAttribute("content", props.description || "");
-  }, [props]);
+const Head = ({ title, description }) => {
+	useEffect(() => {
+		document.title = `${title} | Portfólio`;
 
-  return <></>;
+		const metaDescription = document.querySelector("meta[name='description']");
+		if (metaDescription) {
+			metaDescription.setAttribute("content", description || "");
+		}
+	}, [title, description]);
+
+	return null;
 };
 
 export default Head;

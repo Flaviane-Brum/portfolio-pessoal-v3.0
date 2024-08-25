@@ -1,6 +1,6 @@
 import * as S from "./styles";
-
 import { Link } from "react-router-dom";
+
 export const OtherProjects = ({ links }) => {
 	return (
 		<S.OtherProjects>

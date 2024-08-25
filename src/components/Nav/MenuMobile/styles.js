@@ -7,19 +7,21 @@ export const Icon = styled.span`
   line-height: 70px;
   font-size: 1.5rem;
   text-align: center;
-  transition: 0.5s;
   color: var(--color-p5);
+  transition: transform 0.5s, color 0.5s;
 `;
+
 export const Text = styled.span`
   position: absolute;
-  color: var(--color-5);
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-  opacity: 0;
   font: var(--poppins-12);
   font-weight: 400;
+  color: var(--color-5);
+  letter-spacing: 0.05em;
+  opacity: 0;
   transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
 `;
+
 export const Indicater = styled.li`
   position: absolute;
   top: -50%;
@@ -28,7 +30,7 @@ export const Indicater = styled.li`
   background-color: var(--color-p5);
   border-radius: 50%;
   border: 6px solid var(--color-12);
-  transition: 0.5s;
+  transition: transform 0.5s;
 
   &:before {
     content: "";
@@ -41,6 +43,7 @@ export const Indicater = styled.li`
     border-top-right-radius: 20px;
     box-shadow: 1px -10px 0 0 var(--color-12);
   }
+
   &:after {
     content: "";
     position: absolute;
@@ -53,14 +56,15 @@ export const Indicater = styled.li`
     box-shadow: -1px -10px 0 0 var(--color-12);
   }
 `;
+
 export const Navigation = styled.nav`
-  color: var(--color-0);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 70px;
   background-color: var(--color-11);
+  color: var(--color-0);
   position: relative;
   border-radius: 10px;
   margin-top: 2rem;
@@ -70,9 +74,9 @@ export const Navigation = styled.nav`
   }
 `;
 
-export const NavigationItem = styled.li.attrs((/* props */) => ({
+export const NavigationItem = styled.li.attrs({
   tabIndex: 0,
-}))`
+})`
   position: relative;
   list-style: none;
   width: 70px;
@@ -92,7 +96,7 @@ export const NavigationItem = styled.li.attrs((/* props */) => ({
   &:nth-child(4).active ~ ${Indicater} {
     transform: translateX(calc(70px * 3));
   }
-		&:nth-child(5).active ~ ${Indicater} {
+  &:nth-child(5).active ~ ${Indicater} {
     transform: translateX(calc(70px * 4));
   }
 `;

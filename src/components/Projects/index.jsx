@@ -5,7 +5,8 @@ import { ProjectItem } from "./ProjectItem";
 import { useProject } from "../../hooks/useProject";
 
 export const Projects = () => {
-	const { projectList } = useProject();
+
+	const { projectList } = useProject() || {};
 
 	return (
 		<S.Projects id="projetos">

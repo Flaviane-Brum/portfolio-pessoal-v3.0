@@ -1,4 +1,5 @@
 import * as S from "./styles";
+
 export const ExperienceItem = ({ ExperienceCompany, ExperienceOffice, ExperienceYear }) => {
 	return (
 		<S.ExperienceItem>

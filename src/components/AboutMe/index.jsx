@@ -4,6 +4,7 @@ import { Container } from "../Container";
 import { Subtitle } from "../Subtitle";
 import { dataIcons } from "../helpers/data";
 import { AboutIcon } from "./AboutIcon";
+
 export const AboutMe = () => {
 	return (
 		<S.About id="quem-sou">
@@ -13,8 +14,6 @@ export const AboutMe = () => {
 						<S.Gif
 							src={FlaviGif}
 							alt="Gif de uma menina pensando"
-							height={600}
-							width={600}
 						/>
 						{dataIcons.map((icon) => (
 							<AboutIcon
@@ -33,10 +32,12 @@ export const AboutMe = () => {
 						<p data-aos="fade-down" data-aos-delay="80">
 							Tenho conhecimento em <strong>JavaScript</strong>, <strong>ReactJS</strong>, <strong>VueJS</strong>, <strong>Bootstrap</strong>, <strong>Tailwind CSS</strong> e <strong>WordPress</strong>, com experiência na criação de blogs institucionais.
 						</p>
-						<p data-aos="fade-down" data-aos-delay="70">Nas horas livres, foco em estudar novas linguagens de programação e tecnologias avançadas, mantendo-me atualizada com as tendências da área.
+						<p data-aos="fade-down" data-aos-delay="100">
+							Nas horas livres, foco em estudar novas linguagens de programação e tecnologias avançadas, mantendo-me atualizada com as tendências da área.
 						</p>
-						<p data-aos="fade-down" data-aos-delay="70">Estou sempre em busca de aprender e dominar novas tecnologias, o que me mantém motivada e em constante evolução no desenvolvimento web.</p>
-
+						<p data-aos="fade-down" data-aos-delay="120">
+							Estou sempre em busca de aprender e dominar novas tecnologias, o que me mantém motivada e em constante evolução no desenvolvimento web.
+						</p>
 					</S.AboutContent>
 				</S.AboutWrapper>
 			</Container>

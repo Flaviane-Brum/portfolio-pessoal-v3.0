@@ -2,34 +2,33 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderProject = styled.header`
-  background: var(--color-12);
-  box-shadow: 0 1px 1px var(--color-11);
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-  top: 0;
+	background: rgba(0, 0, 0, 0.8);
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
+	box-shadow: 0 1px 1px var(--color-11);
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	top: 0;
 `;
+
 export const HeaderWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+	padding: 1rem 0;
+	justify-content: center;
 `;
 
 export const HeaderLogo = styled(Link)`
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-  padding: 0.5rem 0;
 	color: var(--color-5);
-  svg {
-    color: var(--color-p5);
+
+	svg {
+		color: var(--color-p5);
 		font-size: 2rem;
-  }
+	}
 `;

@@ -2,6 +2,7 @@ import * as S from "./styles";
 import dec1 from "/dec/decY.svg";
 import { EducationItem } from "./EducationItem";
 import { FaUserGraduate } from "react-icons/fa";
+
 export const EducationComponent = () => {
 	return (
 		<>

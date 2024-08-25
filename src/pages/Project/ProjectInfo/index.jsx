@@ -4,6 +4,7 @@ import { Techs } from "../Techs";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { HiSparkles } from "react-icons/hi";
 import { FaTools } from "react-icons/fa";
+
 export const ProjectInfo = ({ singleProject }) => {
 	return (
 		<S.ProjectContent>

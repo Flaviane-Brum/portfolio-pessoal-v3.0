@@ -3,6 +3,7 @@ import PerfilImg from "/eu.avif";
 import { Container } from "../Container";
 import { TypeWriter } from "../TypeWriter";
 import { FaFileDownload } from "react-icons/fa";
+
 export const Intro = () => {
 	return (
 		<S.Intro aria-label="Introdução" id="home">
@@ -22,7 +23,7 @@ export const Intro = () => {
 								target="_blank"
 								rel="noreferrer"
 							>
-								<FaFileDownload size={20} weight="fill" /> Download CV
+								<FaFileDownload size={20} /> Download CV
 							</a>
 						</S.IntroCv>
 					</S.IntroContent>

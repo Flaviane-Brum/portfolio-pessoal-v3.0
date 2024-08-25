@@ -2,12 +2,14 @@ import * as S from "./styles";
 import Logo from "/logo.svg";
 import { Container } from "../Container";
 import { FaGithubSquare, FaLinkedin, FaHeart } from "react-icons/fa";
+
 export const Footer = () => {
 	return (
 		<S.Footer>
 			<Container>
 				<S.FooterGrid>
 					<img src={Logo} width={141} height={33} alt="Logo do meu site" />
+
 					<S.FooterContact>
 						<h3>Contato</h3>
 						<S.ContactList>
@@ -21,6 +23,7 @@ export const Footer = () => {
 							<li>Rio Grande do Sul - RS</li>
 						</S.ContactList>
 					</S.FooterContact>
+
 					<S.FooterSocial>
 						<h3>Redes sociais</h3>
 						<S.SocialList>
@@ -42,9 +45,9 @@ export const Footer = () => {
 							</a>
 						</S.SocialList>
 					</S.FooterSocial>
+
 					<p>
-						Criado com <FaHeart size={16} color="#9071e9" />
-						por Flaviane <span>Brum</span>
+						Criado com <FaHeart size={16} color="#9071e9" /> por Flaviane <span>Brum</span>
 					</p>
 				</S.FooterGrid>
 			</Container>
