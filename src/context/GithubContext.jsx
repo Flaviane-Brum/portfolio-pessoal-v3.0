@@ -13,8 +13,9 @@ export const GithubContextProvider = ({ children }) => {
 	useEffect(() => {
 		const fetchGitHubData = async () => {
 			const token = import.meta.env.VITE_GITHUB_TOKEN;
+			console.log(token);
 			if (!token) {
-				console.error('GitHub token is missing');
+				console.error("GitHub token is missing");
 				return;
 			}
 
@@ -22,24 +23,27 @@ export const GithubContextProvider = ({ children }) => {
 				setLoading(true);
 
 				const [profileResponse, reposResponse] = await Promise.all([
-					fetch('https://api.github.com/user', {
+					fetch("https://api.github.com/user", {
 						headers: {
 							Authorization: `Bearer ${token}`,
 						},
 					}),
-					fetch(`https://api.github.com/user/repos?page=${page}&per_page=${perPage}`, {
-						headers: {
-							Authorization: `Bearer ${token}`,
-						},
-					}),
+					fetch(
+						`https://api.github.com/user/repos?page=${page}&per_page=${perPage}`,
+						{
+							headers: {
+								Authorization: `Bearer ${token}`,
+							},
+						}
+					),
 				]);
 
 				if (!profileResponse.ok) {
-					throw new Error('Failed to fetch profile');
+					throw new Error("Failed to fetch profile");
 				}
 
 				if (!reposResponse.ok) {
-					throw new Error('Failed to fetch repositories');
+					throw new Error("Failed to fetch repositories");
 				}
 
 				const profileData = await profileResponse.json();
@@ -47,8 +51,10 @@ export const GithubContextProvider = ({ children }) => {
 
 				setUser(profileData);
 				setRepo(reposData);
-				setHasMoreRepos(reposData.length === perPage && (page * perPage) < profileData.public_repos);
-
+				setHasMoreRepos(
+					reposData.length === perPage &&
+					page * perPage < profileData.public_repos
+				);
 			} catch (error) {
 				console.error(error.message);
 			} finally {
