@@ -1,7 +1,6 @@
 import * as S from "./styles";
 import { liValues } from "../helpers/data";
 import { useState } from "react";
-
 export const Nav = () => {
 	const [activeId, setActiveId] = useState(0);
 
