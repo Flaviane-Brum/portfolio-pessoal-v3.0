@@ -13,7 +13,6 @@ export const GithubContextProvider = ({ children }) => {
 	useEffect(() => {
 		const fetchGitHubData = async () => {
 			const token = import.meta.env.VITE_GITHUB_TOKEN;
-			console.log(token);
 			if (!token) {
 				console.error("GitHub token is missing");
 				return;
