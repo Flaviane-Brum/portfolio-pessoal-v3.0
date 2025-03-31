@@ -21,7 +21,7 @@ export const ExperienceComponent = () => {
 				<ExperienceItem
 					ExperienceCompany="WEBGLOBAL"
 					ExperienceOffice="Função: Desenvolvedora web Júnior"
-					ExperienceYear="2024 - Atual 4 meses"
+					ExperienceYear="2024 - Atual 1 ano"
 				/>
 			</S.Experience>
 		</>
